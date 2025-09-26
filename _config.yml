@@ -1,0 +1,39 @@
+# GitHub Pages Configuration for Fyvio Web Stream
+title: "Fyvio Web Stream"
+description: "Web streaming interface powered by Telegram cloud storage via Stremio addon"
+url: "https://SaiKing09.github.io"
+baseurl: "/MvStream"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Include files that start with underscores
+include:
+  - _headers
+  - _redirects
+
+# Plugin settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# SEO and social settings
+author: SaiKing09
+twitter:
+  username: SaiKing09
+social:
+  - https://github.com/SaiKing09
+
+# GitHub Pages settings
+repository: SaiKing09/MvStream

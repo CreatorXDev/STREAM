@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎬 Fyvio Web Stream | Telegram Cloud Streaming</title>
+    <meta name="description" content="Stream videos directly from Telegram cloud storage via Fyvio Stremio addon. Fast, unlimited, and free streaming.">
+    <meta name="keywords" content="streaming, telegram, stremio, movies, series, cloud storage">
+    <meta name="author" content="SaiKing09">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://SaiKing09.github.io/MvStream/">
+    <meta property="og:title" content="Fyvio Web Stream - Telegram Cloud Streaming">
+    <meta property="og:description" content="Stream videos directly from Telegram cloud storage via Fyvio Stremio addon">
+    <meta property="og:image" content="https://SaiKing09.github.io/MvStream/assets/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://SaiKing09.github.io/MvStream/">
+    <meta property="twitter:title" content="Fyvio Web Stream - Telegram Cloud Streaming">
+    <meta property="twitter:description" content="Stream videos directly from Telegram cloud storage via Fyvio Stremio addon">
+    <meta property="twitter:image" content="https://SaiKing09.github.io/MvStream/assets/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./style.css">
+    
+    <!-- Progressive Web App -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#2a5298">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎬 Fyvio Web Stream</h1>
+            <p>Powered by Telegram Cloud Storage via Stremio Addon</p>
+            <div class="github-badge">
+                <a href="https://github.com/SaiKing09/MvStream" target="_blank" rel="noopener">
+                    ⭐ Star on GitHub
+                </a>
+            </div>
+        </header>
+
+        <div class="search-section">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search for movies, series..." autocomplete="off">
+                <button onclick="searchContent()" aria-label="Search content">Search</button>
+            </div>
+        </div>
+
+        <div id="loadingSpinner" class="loading" style="display: none;" aria-hidden="true">
+            <div class="spinner"></div>
+            <p>Loading content from Telegram cloud...</p>
+        </div>
+
+        <div id="videoSection" class="video-section" style="display: none;">
+            <video id="mainVideo" controls preload="metadata" aria-label="Video player">
+                <p>Your browser doesn't support HTML5 video. Please update your browser.</p>
+            </video>
+            <div class="video-info">
+                <h2 id="videoTitle">Video Title</h2>
+                <p id="videoDescription">Video description will appear here</p>
+            </div>
+        </div>
+
+        <div id="contentGrid" class="content-grid" role="main">
+            <!-- Content will be populated by JavaScript -->
+        </div>
+
+        <div class="addon-info">
+            <h3>🔌 Addon Status</h3>
+            <div id="addonStatus" class="status-indicator">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span id="statusText">Connecting to Fyvio Addon...</span>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2024 Fyvio Web Stream | Built by <a href="https://github.com/SaiKing09" target="_blank">@SaiKing09</a></p>
+                <div class="footer-links">
+                    <a href="https://github.com/SaiKing09/MvStream" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://github.com/SaiKing09/MvStream/issues" target="_blank" rel="noopener">Report Issue</a>
+                    <a href="#" onclick="showAbout()">About</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- About Modal -->
+    <div id="aboutModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeAbout()">&times;</span>
+            <h2>About Fyvio Web Stream</h2>
+            <p>Fyvio Web Stream is a modern web interface that integrates with the Fyvio Stremio addon to provide seamless video streaming using Telegram's unlimited cloud storage.</p>
+            <h3>Features:</h3>
+            <ul>
+                <li>🎬 Direct browser streaming</li>
+                <li>☁️ Telegram cloud integration</li>
+                <li>🔍 Advanced search capabilities</li>
+                <li>📱 Mobile-responsive design</li>
+                <li>⚡ Fast content discovery</li>
+            </ul>
+            <p>Deployed on GitHub Pages for free, fast, and reliable access worldwide.</p>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
